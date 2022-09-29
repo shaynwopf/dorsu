@@ -1,0 +1,567 @@
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>DAVAO ORIENTAL STATE UNIVERSITY</title>
+	<link rel="shortcut icon" href="/img/dorsu.ico">
+    <meta name="author" content="name">
+    <meta name="description" content="description here">
+    <meta name="keywords" content="keywords,here">
+    <link rel="stylesheet" href="https://unpkg.com/tailwindcss@2.2.19/dist/tailwind.min.css"/> <!--Replace with your tailwind.css once created-->
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/3.7.0/animate.min.css" rel="stylesheet">
+		
+</head>
+<body class="bg-gray-200 font-sans leading-normal tracking-normal">
+
+	<!--Header-->
+
+	<header class="bg-blue-800 dark:bg-slate-800 w-full headerc">
+        <div class="flex flex-col items-center py-0">
+            <a href="#"><img src="/img/LOGO-2.png" width="520"></a>
+        </div>
+    </header>
+	<nav class="sticky top-0  w-full py-0 border-b bg-gray-50" x-data="{ open: false }">
+        <div class="block sm:hidden">
+            <a href="#" class="navc block md:hidden text-base font-bold uppercase text-center flex justify-center items-center bg-yellow-400" @click="open = !open">
+                MENU <svg :class="open ? 'fa-chevron-down': 'fa-chevron-up'" class="svg-inline--fa fa-chevron-up fa-w-14 ml-2" aria-hidden="true" focusable="false" data-prefix="fas" data-icon="chevron-up" role="img" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 448 512" data-fa-i2svg=""><path fill="currentColor" d="M240.971 130.524l194.343 194.343c9.373 9.373 9.373 24.569 0 33.941l-22.667 22.667c-9.357 9.357-24.522 9.375-33.901.04L224 227.495 69.255 381.516c-9.379 9.335-24.544 9.317-33.901-.04l-22.667-22.667c-9.373-9.373-9.373-24.569 0-33.941L207.03 130.525c9.372-9.373 24.568-9.373 33.941-.001z"></path></svg><!-- <i :class="open ? 'fa-chevron-down': 'fa-chevron-up'" class="fas ml-2 fa-chevron-up"></i> -->
+            </a>
+
+        </div>
+        <div :class="open ? 'block': 'hidden' navc1" class="navc1 w-full flex-grow sm:flex sm:items-center sm:w-auto bg-yellow-400">
+            <div class="w-full nav2 container mx-auto flex flex-col sm:flex-row items-center justify-center text-sm font-bold uppercase mt-0 px-6 py-2">
+                <a href="#" class="home1 hover:bg-gray-50 rounded py-2 px-4 mx-2 bg-blue-500">HOME</a>
+                     <div class="relative  inline-block items-center justify-center font-bold uppercase" x-data="{ open: false }">
+                         <a @click="open = true" class="nav3 hover:bg-gray-50 rounded py-2 px-4 mx-2 cursor-pointer">ABOUT</a>
+                            <div x-show="open" @click.away="open = false" class="origin-top-right absolute right-0 mt-2 w-40 rounded-md shadow-lg rounded-md bg-white shadow-xs" style="display: none;"> 
+                                <div class="rounded-md bg-white shadow-xs">
+                                    <div class="py-0" role="menu" aria-orientation="vertical" aria-labelledby="options-menu">
+                                        <a href="#" class="block px-4 py-2 text-sm leading-5 text-gray-700 hover:bg-yellow-400 hover:text-gray-900" role="menuitem">
+                                         History </a>
+                                        <a href="#" class="block px-4 py-2 text-sm leading-5 text-gray-700 hover:bg-yellow-400 hover:text-gray-900" role="menuitem">
+                                         Vision, Mission, Goals, Values </a>
+                                        <a href="#" class="block px-4 py-2 text-sm leading-5 text-gray-700 hover:bg-yellow-400 hover:text-gray-900" role="menuitem">
+                                         Administration</a>
+                                        <a href="#" class="block px-4 py-2 text-sm leading-5 text-gray-700 hover:bg-yellow-400 hover:text-gray-900" role="menuitem">
+                                         Board of Regents </a> 
+                                     </div>
+                                </div>
+                            </div>
+                     </div>
+                    <div class="relative  inline-block items-center justify-center font-bold uppercase" x-data="{ open: false }">
+                         <a @click="open = true" class=" hover:bg-gray-50 rounded py-2 px-4 mx-2 cursor-pointer">ACADEMICS</a>
+                            <div x-show="open" @click.away="open = false" class="origin-top-right absolute right-0 mt-2 w-40 rounded-md shadow-lg rounded-md bg-white shadow-xs" style="display: none;"> 
+                                <div class="rounded-md bg-white shadow-xs">
+                                    <div class="py-0" role="menu" aria-orientation="vertical" aria-labelledby="options-menu">
+                                        <a href="#" class="block px-4 py-2 text-sm leading-5 text-gray-700 hover:bg-yellow-400 hover:text-gray-900" role="menuitem">
+                                         Academic Units </a>
+                                        <a href="#" class="block px-4 py-2 text-sm leading-5 text-gray-700 hover:bg-yellow-400 hover:text-gray-900" role="menuitem">
+                                         Extension Campus </a>
+                                        <a href="#" class="block px-4 py-2 text-sm leading-5 text-gray-700 hover:bg-yellow-400 hover:text-gray-900" role="menuitem">
+                                         Graduate School </a>
+                                        <a href="#" class="block px-4 py-2 text-sm leading-5 text-gray-700 hover:bg-yellow-400 hover:text-gray-900" role="menuitem">
+                                         University Registrar </a> 
+                                        <a href="#" class="block px-4 py-2 text-sm leading-5 text-gray-700 hover:bg-yellow-400 hover:text-gray-900" role="menuitem">
+                                         Pre-school </a>  
+                                     </div>
+                                </div>
+                            </div>
+                     </div>
+                     <div class="relative  inline-block items-center justify-center font-bold uppercase" x-data="{ open: false }">
+                         <a @click="open = true" class=" hover:bg-gray-50 rounded py-2 px-4 mx-2 cursor-pointer">RESEARCH</a>
+                            <div x-show="open" @click.away="open = false" class="origin-top-right absolute right-0 mt-2 w-40 rounded-md shadow-lg rounded-md bg-white shadow-xs" style="display: none;"> 
+                                <div class="rounded-md bg-white shadow-xs">
+                                    <div class="py-0" role="menu" aria-orientation="vertical" aria-labelledby="options-menu">
+                                        <a href="#" class="block px-4 py-2 text-sm leading-5 text-gray-700 hover:bg-yellow-400 hover:text-gray-900" role="menuitem">
+                                         Researches </a>
+                                        <a href="#" class="block px-4 py-2 text-sm leading-5 text-gray-700 hover:bg-yellow-400 hover:text-gray-900" role="menuitem">
+                                         Extension Programs </a>
+                                        <a href="#" class="block px-4 py-2 text-sm leading-5 text-gray-700 hover:bg-yellow-400 hover:text-gray-900" role="menuitem">
+                                         Davao Research Journal </a>
+                                        <a href="#" class="block px-4 py-2 text-sm leading-5 text-gray-700 hover:bg-yellow-400 hover:text-gray-900" role="menuitem">
+                                         IPTBM </a> 
+                                        <a href="#" class="block px-4 py-2 text-sm leading-5 text-gray-700 hover:bg-yellow-400 hover:text-gray-900" role="menuitem">
+                                         International Relations </a>
+                                        <a href="#" class="block px-4 py-2 text-sm leading-5 text-gray-700 hover:bg-yellow-400 hover:text-gray-900" role="menuitem">
+                                         Dashboard </a>
+                                        <a href="#" class="block px-4 py-2 text-sm leading-5 text-gray-700 hover:bg-yellow-400 hover:text-gray-900" role="menuitem">
+                                         Linkages </a>  
+                                     </div>
+                                </div>
+                            </div>
+                     </div>
+                     <div class="relative  inline-block items-center justify-center font-bold uppercase" x-data="{ open: false }">
+                         <a @click="open = true" class=" hover:bg-gray-50 rounded py-2 px-4 mx-2 cursor-pointer">STUDENTS</a>
+                            <div x-show="open" @click.away="open = false" class="origin-top-right absolute right-0 mt-2 w-40 rounded-md shadow-lg rounded-md bg-white shadow-xs" style="display: none;"> 
+                                <div class="rounded-md bg-white shadow-xs">
+                                    <div class="py-0" role="menu" aria-orientation="vertical" aria-labelledby="options-menu">
+                                        <a href="#" class="block px-4 py-2 text-sm leading-5 text-gray-700 hover:bg-yellow-400 hover:text-gray-900" role="menuitem">
+                                         Student Services </a>
+                                        <a href="#" class="block px-4 py-2 text-sm leading-5 text-gray-700 hover:bg-yellow-400 hover:text-gray-900" role="menuitem">
+                                         USC </a>
+                                        <a href="#" class="block px-4 py-2 text-sm leading-5 text-gray-700 hover:bg-yellow-400 hover:text-gray-900" role="menuitem">
+                                         Student Publication </a>
+                                        <a href="#" class="block px-4 py-2 text-sm leading-5 text-gray-700 hover:bg-yellow-400 hover:text-gray-900" role="menuitem">
+                                         ULIRC </a> 
+                                     </div>
+                                </div>
+                            </div>
+                     </div>
+                      <div class="relative  inline-block items-center justify-center font-bold uppercase" x-data="{ open: false }">
+                         <a @click="open = true" class=" hover:bg-gray-50 rounded py-2 px-4 mx-2 cursor-pointer">RESOURCE</a>
+                            <div x-show="open" @click.away="open = false" class="origin-top-right absolute right-0 mt-2 w-40 rounded-md shadow-lg rounded-md bg-white shadow-xs" style="display: none;"> 
+                                <div class="rounded-md bg-white shadow-xs">
+                                    <div class="py-0" role="menu" aria-orientation="vertical" aria-labelledby="options-menu">
+                                        <a href="#" class="block px-4 py-2 text-sm leading-5 text-gray-700 hover:bg-yellow-400 hover:text-gray-900" role="menuitem">
+                                         Alumni Tracer </a>
+                                        <a href="#" class="block px-4 py-2 text-sm leading-5 text-gray-700 hover:bg-yellow-400 hover:text-gray-900" role="menuitem">
+                                         Grades Portal </a>
+                                     </div>
+                                </div>
+                            </div>
+                     </div>
+                     <div class="relative  inline-block items-center justify-center font-bold uppercase" x-data="{ open: false }">
+                         <a @click="open = true" class=" hover:bg-gray-50 rounded py-2 px-4 mx-2 cursor-pointer">ADMISSIONS</a>
+                            <div x-show="open" @click.away="open = false" class="origin-top-right absolute right-0 mt-2 w-40 rounded-md shadow-lg rounded-md bg-white shadow-xs" style="display: none;"> 
+                                <div class="rounded-md bg-white shadow-xs">
+                                    <div class="py-0" role="menu" aria-orientation="vertical" aria-labelledby="options-menu">
+                                        <a href="#" class="block px-4 py-2 text-sm leading-5 text-gray-700 hover:bg-yellow-400 hover:text-gray-900" role="menuitem">
+                                         Admission Requirements </a>
+                                        <a href="#" class="block px-4 py-2 text-sm leading-5 text-gray-700 hover:bg-yellow-400 hover:text-gray-900" role="menuitem">
+                                         Scholarships (FASST) </a>
+                                     </div>
+                                </div>
+                            </div>
+                     </div>
+                     <div class="relative  inline-block items-center justify-center font-bold uppercase" x-data="{ open: false }">
+                         <a @click="open = true" class=" hover:bg-gray-50 rounded py-2 px-4 mx-2 cursor-pointer">GRADE INQUIRY</a>
+                            <div x-show="open" @click.away="open = false" class="origin-top-right absolute right-0 mt-2 w-40 rounded-md shadow-lg rounded-md bg-white shadow-xs" style="display: none;"> 
+                                <div class="rounded-md bg-white shadow-xs">
+                                    <div class="py-0" role="menu" aria-orientation="vertical" aria-labelledby="options-menu">
+                                        <a href="#" class="block px-4 py-2 text-sm leading-5 text-gray-700 hover:bg-yellow-400 hover:text-gray-900" role="menuitem">
+                                         Grade Inquiry 2 </a>
+                                        <a href="#" class="block px-4 py-2 text-sm leading-5 text-gray-700 hover:bg-yellow-400 hover:text-gray-900" role="menuitem">
+                                         Grade Inquiry 3 </a>
+                                     </div>
+                                </div>
+                            </div>
+                     </div>
+                        
+					
+            </div>
+        </div>
+    </nav>
+
+	<div class="w-full m-0 p-0 bg-cover bg-bottom" style="background-image:url('/img/cover.jpg'); height: 60vh; max-height:460px;">
+			<div class="container max-w-4xl mx-auto pt-16 md:pt-32 text-center break-normal">
+				<!--Title-->
+					<p class="border-double border-4 border-sky-500 text-yellow-500 font-extrabold text-3xl md:text-5xl">
+						DAVAO ORIENTAL STATE UNIVERSITY NEWS AND EVENTS
+						
+					</p>
+					
+			</div>
+			
+		</div>
+		
+		
+		<!--Container-->
+		<div class="container px-4 md:px-0 max-w-6xl mx-auto -mt-32">
+			
+			<div class="mx-0 sm:mx-6">
+				
+				<!--Nav-->
+				<nav class="mt-0 w-full">
+					<div class="container mx-auto flex items-center">
+						
+				
+						<div class="flex w-1/2 justify-end content-center">		
+							<a class="inline-block text-gray-500 no-underline hover:text-white hover:text-underline text-center h-10 p-2 md:h-auto md:p-4 avatar" data-tippy-content="@twitter_handle" href="https://twitter.com/intent/tweet?url=#">
+								<svg class="fill-current h-4" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 32 32"><path d="M30.063 7.313c-.813 1.125-1.75 2.125-2.875 2.938v.75c0 1.563-.188 3.125-.688 4.625a15.088 15.088 0 0 1-2.063 4.438c-.875 1.438-2 2.688-3.25 3.813a15.015 15.015 0 0 1-4.625 2.563c-1.813.688-3.75 1-5.75 1-3.25 0-6.188-.875-8.875-2.625.438.063.875.125 1.375.125 2.688 0 5.063-.875 7.188-2.5-1.25 0-2.375-.375-3.375-1.125s-1.688-1.688-2.063-2.875c.438.063.813.125 1.125.125.5 0 1-.063 1.5-.25-1.313-.25-2.438-.938-3.313-1.938a5.673 5.673 0 0 1-1.313-3.688v-.063c.813.438 1.688.688 2.625.688a5.228 5.228 0 0 1-1.875-2c-.5-.875-.688-1.813-.688-2.75 0-1.063.25-2.063.75-2.938 1.438 1.75 3.188 3.188 5.25 4.25s4.313 1.688 6.688 1.813a5.579 5.579 0 0 1 1.5-5.438c1.125-1.125 2.5-1.688 4.125-1.688s3.063.625 4.188 1.813a11.48 11.48 0 0 0 3.688-1.375c-.438 1.375-1.313 2.438-2.563 3.188 1.125-.125 2.188-.438 3.313-.875z"></path></svg>
+							</a>
+							<a class="inline-block text-gray-500 no-underline hover:text-white hover:text-underline text-center h-10 p-2 md:h-auto md:p-4 avatar" data-tippy-content="#facebook_id" href="https://www.facebook.com/sharer/sharer.php?u=#">
+								<svg class="fill-current h-4" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 32 32"><path d="M19 6h5V0h-5c-3.86 0-7 3.14-7 7v3H8v6h4v16h6V16h5l1-6h-6V7c0-.542.458-1 1-1z"></path></svg>
+							</a>
+						</div>
+
+					</div>
+				</nav>
+
+				<div class="bg-gray-200 w-full text-xl md:text-2xl text-gray-800 leading-normal rounded-t">
+					
+				<!--Lead Card-->
+				<div class="flex h-full bg-white rounded overflow-hidden shadow-lg">
+					<a href="post.html" class="flex flex-wrap no-underline hover:no-underline">
+						<div class="w-full md:w-2/3 rounded-t">	
+							<img src="/img/ENZO2-520x245.jpg" class="h-full w-full shadow">
+						</div>
+
+						<div class="w-full md:w-1/3 flex flex-col flex-grow flex-shrink">
+							<div class="flex-1 bg-white rounded-t rounded-b-none overflow-hidden shadow-lg">
+								<p class="w-full font-bold text-xl text-gray-900 px-6">DOrSU, OCVM sign MOA for Educational Assistance Program</p>
+								<div class="text-sm text-slate-800 my-2 text-center"> September 20, 2022 </div>
+								<p class="text-gray-800 font-serif text-base px-6 mb-5">
+									Dr. Roy G. Ponce, President of DorSU, and Vice Mayor Lorenzo Leon G. Rabat, representing the Office of the City Vice Mayor (OCVM), signed a Memorandum of Agreement (MOA) for the “Ka-asENZO” Thesis Educational Assistance...
+								</p>
+							</div>
+
+							<div class="flex-none mt-auto bg-white rounded-b rounded-t-none overflow-hidden shadow-lg p-6">
+								<div class="flex items-center justify-between">
+									<img class="w-8 h-8 rounded-full mr-4 avatar" data-tippy-content="Author Name" src="http://i.pravatar.cc/300" alt="Avatar of Author">
+									<p class="text-gray-600 text-xs md:text-sm">1 MIN READ</p>
+								</div>
+							</div>
+						</div>
+
+					</a>
+				</div>
+				<!--/Lead Card-->
+
+
+				<!--Posts Container-->
+				<div class="flex flex-wrap justify-between pt-12 -mx-6">
+
+					<!--1/3 col -->
+					<div class="w-full md:w-1/3 p-6 flex flex-col flex-grow flex-shrink">
+						<div class="flex-1 bg-white rounded-t rounded-b-none overflow-hidden shadow-lg">
+							<a href="#" class="flex flex-wrap no-underline hover:no-underline">
+								<img src="/img/6-520x245.jpg" class="h-64 w-full rounded-t pb-6">
+								<p class="w-full font-bold text-xl text-gray-900 px-6">DOrSU Management meets for QMS Review</p>
+							
+								<div class="text-sm text-slate-800 my-2 px-6 mb-5"> September 19, 2022 </div>
+								<p class="text-gray-800 font-serif text-base px-6 mb-5">
+									The top management of Davao Oriental State University met today, September 19, 2022, at the DOrSU Boardroom, for the first Management Review to consider possible improvements, effectiveness, adequacy of... 
+								</p>
+							</a>
+						</div>
+						<div class="flex-none mt-auto bg-white rounded-b rounded-t-none overflow-hidden shadow-lg p-6">
+							<div class="flex items-center justify-between">
+								<img class="w-8 h-8 rounded-full mr-4 avatar" data-tippy-content="Author Name" src="http://i.pravatar.cc/300" alt="Avatar of Author">
+								<p class="text-gray-600 text-xs md:text-sm">1 MIN READ</p>
+							</div>
+						</div>
+					</div>
+				
+					
+					<!--1/3 col -->
+					<div class="w-full md:w-1/3 p-6 flex flex-col flex-grow flex-shrink">
+						<div class="flex-1 bg-white rounded-t rounded-b-none overflow-hidden shadow-lg">
+							<a href="#" class="flex flex-wrap no-underline hover:no-underline">
+								<img src="/img/th-2022-09-18T213221.567-520x245.jpg" class="h-64 w-full rounded-t pb-6">
+								<p class="w-full font-bold text-xl text-gray-900 px-6">DOrSU employees trained to respond to emergencies</p>
+								<div class="text-sm text-slate-800 my-2 px-6 mb-5"> September 18, 2022 </div>
+								<p class="text-gray-800 font-serif text-base px-6 mb-5">
+									Selected staff and faculty of Davao Oriental State University(DOrSU) received training from the City Disaster Risk Reduction and Management Office (CDRRMO), City of Mati, to prepare them for emergencies that might...
+								</p>
+							</a>
+							</div>
+						<div class="flex-none mt-auto bg-white rounded-b rounded-t-none overflow-hidden shadow-lg p-6">
+							<div class="flex items-center justify-between">
+								<img class="w-8 h-8 rounded-full mr-4 avatar" data-tippy-content="Author Name" src="http://i.pravatar.cc/300" alt="Avatar of Author">
+								<p class="text-gray-600 text-xs md:text-sm">1 MIN READ</p>
+							</div>
+						</div>
+					</div>
+
+					<!--1/3 col -->
+					<div class="w-full md:w-1/3 p-6 flex flex-col flex-grow flex-shrink">
+						<div class="flex-1 bg-white rounded-t rounded-b-none overflow-hidden shadow-lg">
+							<a href="#" class="flex flex-wrap no-underline hover:no-underline">
+								<img src="/img/th-2022-09-14T110532.884-520x245.jpg" class="h-64 w-full rounded-t pb-6">
+								<p class="w-full  font-bold text-xl text-gray-900 px-6">US Pediatricians, DOrSU work toward reducing maternal, newborn mortality</p>
+								<div class="text-sm text-slate-800 my-2 px-6 mb-5"> September 14, 2022 </div>
+								<p class="text-gray-800 font-serif text-base px-6 mb-5">
+									Dr. Roy G. Ponce, President of DorSU, and Vice Mayor Lorenzo Leon G. Rabat, representing the Office of the City Vice Mayor (OCVM), signed a Memorandum of Agreement (MOA) for the “Ka-asENZO” Thesis Educational Assistance... 
+								</p>
+							</a>
+						</div>
+						<div class="flex-none mt-auto bg-white rounded-b rounded-t-none overflow-hidden shadow-lg p-6">
+							<div class="flex items-center justify-between">
+								<img class="w-8 h-8 rounded-full mr-4 avatar" data-tippy-content="Author Name" src="http://i.pravatar.cc/300" alt="Avatar of Author">
+								<p class="text-gray-600 text-xs md:text-sm">1 MIN READ</p>
+							</div>
+						</div>
+					</div>
+
+
+					<!--1/2 col -->
+					<div class="w-full md:w-1/2 p-6 flex flex-col flex-grow flex-shrink">
+						<div class="flex-1 bg-white rounded-t rounded-b-none overflow-hidden shadow-lg">
+							<a href="#" class="flex flex-wrap no-underline hover:no-underline">
+								<img src="/img/MOA-CAREER-CENTRE-ACADEMIE-DORSU-AUGUST-15-2022-520x245.jpg" class="h-full w-full rounded-t pb-6">
+								<p class="w-full font-bold text-xl text-gray-900 px-6">DOrSU, CCATI sign MOA for Tech-voc Training, Nat’l Certification Activities</p>
+								<div class="text-sm text-slate-800 my-2 px-6 mb-5"> August 20, 2022 </div>
+								<p class="text-gray-800 font-serif text-base px-6 mb-5">
+									DOrSU President Roy G. Ponce and Career Centre Academie and Technological Institute, Inc. (CCATI)President Ms. Mary Jane P. Trinidad signed a Memorandum of Agreement covering technical vocationaltraining and national certification activities for the Bachelor...
+								</p>
+							</a>
+						</div>
+						<div class="flex-none mt-auto bg-white rounded-b rounded-t-none overflow-hidden shadow-lg p-6">
+							<div class="flex items-center justify-between">
+								<img class="w-8 h-8 rounded-full mr-4 avatar" data-tippy-content="Author Name" src="http://i.pravatar.cc/300" alt="Avatar of Author">
+								<p class="text-gray-600 text-xs md:text-sm">1 MIN READ</p>
+							</div>
+						</div>
+					</div>
+
+					<!--1/2 col -->
+					<div class="w-full md:w-1/2 p-6 flex flex-col flex-grow flex-shrink">
+						<div class="flex-1 flex-row bg-white rounded-t rounded-b-none overflow-hidden shadow-lg">
+							<a href="#" class="flex flex-wrap no-underline hover:no-underline">	
+								<img src="/img/PROF-WIART-520x245.jpg" class="h-full w-full rounded-t pb-6">
+								<p class="w-full font-bold text-xl text-gray-900 px-6">French Scientist to engage as an Adjunct Professor at DOrSU</p>
+								<div class="text-sm text-slate-800 my-2 px-6 mb-5"> August 19, 2022 </div>
+								<p class="text-gray-800 font-serif text-base px-6 mb-5">
+									The University of Malaysia Sabah Associate Professor Dr. Christophe Wiart will work as an adjunct professor at Davao Oriental State University, as confirmed by DOrSU President Dr. Roy G Ponce. During their initial conversation...
+								</p>
+							</a>
+						</div>
+						<div class="flex-none mt-auto bg-white rounded-b rounded-t-none overflow-hidden shadow-lg p-6">
+							<div class="flex items-center justify-between">
+								<img class="w-8 h-8 rounded-full mr-4 avatar" data-tippy-content="Author Name" src="http://i.pravatar.cc/300" alt="Avatar of Author">
+								<p class="text-gray-600 text-xs md:text-sm">1 MIN READ</p>
+							</div>
+						</div>
+					</div>
+
+
+
+					
+
+				</div>
+				<!--/ Post Content-->
+
+				<div class="flex text-center container items-center py-8 justify-center  ">
+					<a href="#" class="h-10 w-10 bg-yellow-400 hover:bg-blue-600 font-semibold text-white text-sm flex items-center justify-center">1</a>
+					<a href="#" class="arrrore1 h-10 w-10 font-semibold  hover:bg-blue-600 hover:text-white text-sm flex items-center justify-center">2</a>
+					<a href="#" class="arrrore h-10 w-10 font-semibold text-sm flex items-center justify-center ml-3">Next </a>
+				</div>
+
+				<div class="mx-1">
+					<div class="container mx-auto my-6 border-b-4 border-blue-500 w-full"></div>
+			</div>	
+			</div>
+		</div>
+	</div>
+
+	<div class="text-center">
+		<h1 class="namename1 text-4xl font-bold pt-3 pb-1 text-sky-800">INSTITUTES AND DEPARTMENT</h1>
+	</div>
+	<div class="container mt-5 mx-auto px-2">
+		<!--1st-->
+			  <div class="md:flex">
+				<div class="flex-1 text-blue-800 bg-white text-center  px-5 py-5 m-2 rounded">
+					<div class="lg:flex lg:items-center">
+						<div class="lg:flex-shrink-0">
+							<a href="#"><img class="rounded-lg lg:w-64" src="https://dorsu.edu.ph/wp-content/uploads/2021/10/ials-1-300x150.png" alt="" /></a>
+						</div>
+							<div class="mt-4 lg:mt-0 lg:ml-6">
+								<div class="uppercase text-4xl tracking-wide text-sm text-green-600 font-bold">
+									 IALS
+								</div>
+									 <a href="#" class="block mt-1 text-lg leading-tight font-semibold text-black hover:text-green-600 rounded"> INSTITUTE OF AGRICULTURE AND LIFE SCIENCES 
+									 </a>
+							</div>
+					</div>
+				</div>
+				<div class="flex-1 text-gray-700 bg-white text-center px-5 py-5 m-2 rounded">
+					<div class="lg:flex lg:items-center">
+						<div class="lg:flex-shrink-0">
+							<a href="#"><img class="rounded-lg lg:w-64" src="https://dorsu.edu.ph/wp-content/uploads/2021/10/ibpa-1-300x150.png" alt="" /></a>
+						</div>
+							<div class="mt-4 lg:mt-0 lg:ml-6">
+								 <div class="uppercase text-4xl tracking-wide text-sm text-rose-800 font-bold">
+									 IBPA
+								</div>
+									 <a href="#" class="block mt-1 text-lg leading-tight font-semibold text-gray-900 hover:text-rose-800">INSTITUTE OF BUSINESS AND PUBLIC AFFAIRS
+									 </a>
+							</div>
+					</div>
+				</div>
+			  </div>
+		<!--1st-->
+			  <div class="md:flex">
+				<div class="flex-1 text-gray-700 bg-white text-center  px-5 py-5 m-2 rounded">
+					<div class="lg:flex lg:items-center">
+						<div class="lg:flex-shrink-0">
+							<a href="#"> <img class="rounded-lg lg:w-64" src="https://dorsu.edu.ph/wp-content/uploads/2021/10/ice-1-300x150.png" alt="" /></a>
+						</div>
+							<div class="mt-4 lg:mt-0 lg:ml-6">
+								 <div class="uppercase text-4xl tracking-wide text-sm text-[#FF6000] font-bold">
+									 ICE
+								</div>
+									 <a href="#" class="block mt-1 text-lg leading-tight font-semibold text-gray-900 hover:text-[#FF6000] "> INSTITUTE OF COMPUTING AND ENGINEERING
+									 </a>
+							</div>
+					</div>
+				</div>
+				<div class="flex-1 text-gray-700 bg-white text-center  px-5 py-5 m-2 rounded">
+					<div class="lg:flex lg:items-center">
+						<div class="lg:flex-shrink-0">
+							<a href="#"><img class="rounded-lg lg:w-64" src="https://dorsu.edu.ph/wp-content/uploads/2021/10/ieet-300x150.png" alt="" /></a>
+						</div>
+							<div class="mt-4 lg:mt-0 lg:ml-6">
+								 <div class="uppercase text-4xl tracking-wide text-sm text-[#0078FF]  font-bold">
+									 IETT
+								</div>
+									 <a href="#" class="block mt-1 text-lg leading-tight font-semibold text-gray-900 hover:text-[#0078FF] "> INSTITUTE OF EDUCATION AND TEACHER TRAINING
+									 </a>
+							</div>
+					</div>
+				</div>
+			  </div>
+		<!--1st-->
+			  <div class="md:flex">
+				<div class="flex-1 text-gray-700 bg-white text-center  px-5 py-5 m-2 rounded">
+					<div class="lg:flex lg:items-center">
+						<div class="lg:flex-shrink-0">
+							<a href="#"><img class="rounded-lg lg:w-64" src="https://dorsu.edu.ph/wp-content/uploads/2021/12/INAHS-1-300x150.png" alt="" /></a>
+						</div>
+							<div class="mt-4 lg:mt-0 lg:ml-6">
+								 <div class="uppercase text-4xl tracking-wide text-sm text-[#FFD800]  font-bold">
+									 INAHS
+								</div>
+									 <a href="#" class="block mt-1 text-lg leading-tight font-semibold text-gray-900 hover:text-[#FFD800]"> INSTITUTE OF NURSING AND ALLIED HEALTH SCIENCES
+									 </a>
+							</div>
+					</div>
+				</div>
+			   <div class="flex-1 text-gray-700 bg-white text-center  px-5 py-5 m-2 rounded">
+					<div class="lg:flex lg:items-center">
+						<div class="lg:flex-shrink-0">
+							<a href="#"><img class="rounded-lg lg:w-64" src="https://dorsu.edu.ph/wp-content/uploads/2021/10/PRE-SCHOOL-300x113.png" alt="" /></a>
+						</div>
+							<div class="mt-4 lg:mt-0 lg:ml-6">
+								 <div class="uppercase text-4xl tracking-wide text-center text-sm text-[#00D2B7] font-bold">
+										&nbsp;   PRE-SCHOOL
+								</div>
+									 <a href="#" class="block mt-1 text-lg leading-tight font-semibold text-gray-900 hover:text-[#00D2B7]">  &nbsp;  &nbsp;  &nbsp; PRE SCHOOL
+									 </a>
+							</div>
+					</div>
+				</div>
+			  </div>
+			</div>
+				<div class="mx-1 pt-[30px] pb-[10px]">
+					<div class="container mx-auto my-6 border-b-4 border-yellow-500 w-full"></div>
+				</div> 
+					<div class="text-center">
+					<h1 class="namename2 text-4xl font-bold pt-1 pb-1 text-sky-800">MORE LINKS</h1>
+				</div>
+				<div class="mt-6 pb-14 container md:flex flex-wrap max-w-8xl px-8 justify-center m-auto ">
+					<div class="qazwsx p-2 w-full md:w-1/4 h-40 lg:w-1/5 my-2">
+						<div class="w-full bg-white h-full block justify-center items-center cursor-pointer   rounded-tl-lg rounded-br-lg  hover:scale-105 duration-300 ease-in-out">
+							<p class="inline left-0 p-[5px] rounded-tl-lg rounded-br-lg uppercase text-white text-xs tracking-wide font-semibold bg-blue-800">Philippine Transparency Seal</p>
+							<div class="flex h-28 content-center justify-center items-center"> <a href="#" class="content-center"><img class="w-24 content-center" src="/img/transparency-1-300x300.png"></a>
+							</div>
+						</div>
+					</div>
+					<div class="p-2 w-full md:w-1/4 h-40 lg:w-1/5  my-2">
+						<div class="w-full bg-white h-full block justify-center items-center cursor-pointer  rounded-tl-lg rounded-br-lg  hover:scale-105 duration-300 ease-in-out">
+							<p class="inline left-0 p-[5px] rounded-tl-lg rounded-br-lg uppercase text-white text-xs tracking-wide font-semibold bg-blue-800">freedom of information</p>
+							<div class="flex h-28 content-center justify-center items-center"> <a href="#" class="content-center"><img class="w-24 content-center" src="/img/freedom-300x300.png"></a>
+							</div>
+						</div>
+					</div>
+					<div class="p-2 w-full md:w-1/4 h-40 lg:w-1/5  my-2">
+						<div class="w-full bg-white h-full block justify-center items-center cursor-pointer   rounded-tl-lg rounded-br-lg  hover:scale-105 duration-300 ease-in-out">
+							<p class="inline left-0 p-[5px] rounded-tl-lg rounded-br-lg uppercase text-white text-xs tracking-wide font-semibold bg-blue-800">invitation to bed</p>
+							<div class="flex h-28 content-center justify-center items-center"> <a href="#" class="content-center"><img class="w-24 content-center" src="/img/bid.png"></a>
+							</div>
+						</div>
+					</div>
+					<div class="p-2 w-full md:w-1/4 h-40 lg:w-1/5 my-2">
+						<div class="w-full bg-white h-full block justify-center items-center cursor-pointer rounded-tl-lg rounded-br-lg  hover:scale-105 duration-300 ease-in-out">
+							<p class="inline left-0 p-[5px] rounded-tl-lg rounded-br-lg uppercase text-white text-xs tracking-wide font-semibold bg-blue-800">esip</p>
+							<div class="flex h-28 content-center justify-center items-center"> <a href="#" class="content-center"><img class="w-24 content-center" src="/img/esip-300x251.png"></a>
+							</div>
+						</div>
+					</div>
+					<div class="p-2 w-full md:w-1/4 h-40 lg:w-1/5 my-2">
+						<div class="w-full bg-white h-full block justify-center items-center cursor-pointer  rounded-tl-lg rounded-br-lg  hover:scale-105 duration-300 ease-in-out">
+							<p class="inline left-0 p-[5px] rounded-tl-lg rounded-br-lg uppercase text-white text-xs tracking-wide font-semibold bg-blue-800">open data philippines</p>
+							<div class="flex h-28 content-center justify-center items-center"> <a href="#" class="content-center"><img class="w-48 content-center" src="/img/openDataPh-300x121.png"></a>
+							</div>
+						</div> 
+					</div>
+					
+					<div class="p-2 w-full md:w-1/4 h-40 lg:w-1/5  my-2">
+						<div class="w-full bg-white h-full block justify-center items-center cursor-pointer rounded-tl-lg rounded-br-lg  hover:scale-105 duration-300 ease-in-out">
+							<p class="inline left-0 p-[5px] rounded-tl-lg rounded-br-lg uppercase text-white text-xs tracking-wide font-semibold bg-blue-800">career opportunities</p>
+							<div class="flex h-28 content-center justify-center items-center"> <a href="#" class="content-center"><img class="w-48 content-center" src="/img/CAREER-OPP-1-300x113.png"></a>
+							</div>
+						</div>   
+					</div>
+		
+					<div class="p-2 w-full md:w-1/4 h-40 lg:w-1/5  my-2">
+						<div class="w-full bg-white h-full block justify-center items-center cursor-pointer rounded-tl-lg rounded-br-lg  hover:scale-105 duration-300 ease-in-out">
+							<p class="inline left-0 p-[5px] rounded-tl-lg rounded-br-lg uppercase text-white text-xs tracking-wide font-semibold bg-blue-800">Information Magazine</p>
+							<div class="flex h-28 content-center justify-center items-center"> <a href="#" class="content-center"><img class="w-48 content-center" src="/img/Info-magazine-300x113.jpg"></a>
+							</div>
+						</div>   
+					</div>
+				</div> 
+
+			<div class="bg-yellow-400 max-w flex text-white">
+					<div class="container mx-auto text-center">
+						<div class="py-3 pb-20 pt-[20px]">
+							<div class="flex flex-col items-center py-0">
+								 <img src="https://dorsu.edu.ph/wp-content/uploads/2021/12/LOGO-300x150.png" width="400">
+							</div>
+						<h1 class="text-5xl text-blue-600">A university of excellence, innovation and inclusion.</h1>
+						</div>
+					</div>
+				</div>
+
+				<footer class="bg-stone-200 text-white pt-12 pb-8 px-4">
+					<div class="mx-auto px-4 container overflow-hidden flex flex-col lg:flex-row justify-between">
+						<div class="w-2/3 block sm:flex text-sm mt-6 lg:mt-0">
+							<ul class="text-gray-700 list-none p-0 font-thin flex flex-col text-left w-full">
+							 <li class="inline-block py-2 px-3 text-black text-lg font-bold uppercase font-medium tracking-wide">ARCHIVES</li>
+								<li class="font-[400] text-[17px] text-black-600 "><a href="#" class="inline-block py-2 px-3 font-[500] text-[17px] text-black-900 hover:text-blue-800 no-underline">&#128197; September 2022</a>(4)</li>
+								<li class="font-[400] text-[17px] text-black-600 "><a href="#" class="inline-block py-2 px-3 font-[500] text-[17px] text-black-900 hover:text-blue-800 no-underline">&#128197; August 2022</a>(4)</li>
+								<li class="font-[400] text-[17px] text-black-600 "><a href="#" class="inline-block py-2 px-3 font-[500] text-[17px] text-black-900 hover:text-blue-800 no-underline">&#128197; July 2022</a>(4)</li>
+								<li class="font-[400] text-[17px] text-black-600 "><a href="#" class="inline-block py-2 px-3 font-[500] text-[17px] text-black-900 hover:text-blue-800 no-underline">&#128197; June 2022</a>(4)</li>
+								<li class="font-[400] text-[17px] text-black-600 "><a href="#" class="inline-block py-2 px-3 font-[500] text-[17px] text-black-900 hover:text-blue-800 no-underline">&#128197; May 2022</a>(4)</li>
+								<li class="font-[400] text-[17px] text-black-600 "><a href="#" class="inline-block py-2 px-3 font-[500] text-[17px] text-black-900 hover:text-blue-800 no-underline">&#128197; April 2022</a>(4)</li>
+								<li class="font-[400] text-[17px] text-black-600 "><a href="#" class="inline-block py-2 px-3 font-[500] text-[17px] text-black-900 hover:text-blue-800 no-underline">&#128197; Febraury 2022</a>(4)</li>
+								<li class="font-[400] text-[17px] text-black-600 "><a href="#" class="inline-block py-2 px-3 font-[500] text-[17px] text-black-900 hover:text-blue-800 no-underline">&#128197; January 2022</a>(4)</li>
+								<li class="font-[400] text-[17px] text-black-600 "><a href="#" class="inline-block py-2 px-3 font-[500] text-[17px] text-black-900 hover:text-blue-800 no-underline">&#128197; November 2022</a>(4)</li>
+								<li class="font-[400] text-[17px] text-black-600 "><a href="#" class="inline-block py-2 px-3 font-[500] text-[17px] text-black-900 hover:text-blue-800 no-underline">&#128197; October 2022</a>(4)</li>
+							</ul>
+							<ul class="text-gray-700 list-none p-0 font-thin flex flex-col text-left w-full">
+								<li class="inline-block py-2 px-3 text-black text-lg font-bold uppercase font-medium tracking-wide">CAMPUSES</li>
+								<li class="font-[400] text-[17px] text-black-600 "><a href="#" class="inline-block py-2 px-3 font-[500] text-[17px] text-black-900 hover:text-blue-800 no-underline">BANAYBANAY CAMPUS</a></li>
+								<li class="font-[400] text-[17px] text-black-600 "><a href="#" class="inline-block py-2 px-3 font-[500] text-[17px] text-black-900 hover:text-blue-800 no-underline">CATEEL CAMPUS</a></li>
+								<li class="font-[400] text-[17px] text-black-600 "><a href="#" class="inline-block py-2 px-3 font-[500] text-[17px] text-black-900 hover:text-blue-800 no-underline">SAN ISIDRO CAMPUS</a></li>
+								<li class="font-[400] text-[17px] text-black-600 "><a href="#" class="inline-block py-2 px-3 font-[500] text-[17px] text-black-900 hover:text-blue-800 no-underline">BAGANGA CAMPUS</a></li>
+							</ul>
+							<div class="text-gray-700 flex flex-col w-full">
+								<div class="inline-block py-2 px-3 font-bold text-lg text-black uppercase font-medium tracking-wide">Follow Us</div>
+								<div class="flex pl-4 justify-start mt-2">
+									<a class="block flex items-center text-blue-800 hover:scale-150 duration-500 ease-in-out mr-6 no-underline" href="https://www.facebook.com/dorsuofficial">
+										<svg viewBox="0 0 24 24" class="fill-current w-7 h-7" xmlns="http://www.w3.org/2000/svg">
+											<path d="M23.998 12c0-6.628-5.372-12-11.999-12C5.372 0 0 5.372 0 12c0 5.988 4.388 10.952 10.124 11.852v-8.384H7.078v-3.469h3.046V9.356c0-3.008 1.792-4.669 4.532-4.669 1.313 0 2.686.234 2.686.234v2.953H15.83c-1.49 0-1.955.925-1.955 1.874V12h3.328l-.532 3.469h-2.796v8.384c5.736-.9 10.124-5.864 10.124-11.853z" /></svg>
+									</a>
+									<a class="block flex items-center text-blue-800 hover:scale-150 duration-500 ease-in-out mr-6 no-underline" href="https://mobile.twitter.com/dorsuofficial">
+										<svg viewBox="0 0 24 24" class="fill-current w-7 h-7" xmlns="http://www.w3.org/2000/svg">
+											<path d="M23.954 4.569a10 10 0 01-2.825.775 4.958 4.958 0 002.163-2.723c-.951.555-2.005.959-3.127 1.184a4.92 4.92 0 00-8.384 4.482C7.691 8.094 4.066 6.13 1.64 3.161a4.822 4.822 0 00-.666 2.475c0 1.71.87 3.213 2.188 4.096a4.904 4.904 0 01-2.228-.616v.061a4.923 4.923 0 003.946 4.827 4.996 4.996 0 01-2.212.085 4.937 4.937 0 004.604 3.417 9.868 9.868 0 01-6.102 2.105c-.39 0-.779-.023-1.17-.067a13.995 13.995 0 007.557 2.209c9.054 0 13.999-7.496 13.999-13.986 0-.209 0-.42-.015-.63a9.936 9.936 0 002.46-2.548l-.047-.02z" /></svg>
+									</a>
+								</div>
+							</div>
+						</div>
+					</div>
+					<div class="pt-4 mt-4 pt-6 font-medium text-blue-900 border-t border-blue-900 text-center"> Davao Oriental State University © 2022. All Rights Reserved.</div>
+				</footer>
+
+				
+	<script src="https://unpkg.com/popper.js@1/dist/umd/popper.min.js"></script>
+	<script src="https://unpkg.com/tippy.js@4"></script>
+	<script>
+		//Init tooltips
+		tippy('.avatar')
+	</script>
+</body>
+</html>
